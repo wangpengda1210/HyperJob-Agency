@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Welcome,
+        {% if username is not None %}
+            {{username}}
+        {% else %}
+            Anonymous
+        {% endif %}
+        {% if is_staff %} (Staff){% endif %}</h2>
+    <h2>Resumes Submitted</h2>
+    {% if user_resumes is None %}
+        <p>No resume uploaded</p>
+    {% else %}
+        {% for user_resume in user_resumes %}
+            <div>{{user_resume.description}}</div>
+        {% endfor %}
+    {% endif %}
+
+    <h2>Upload Resume</h2>
+    <form action="/resume/new" method="post">
+        {% csrf_token %}
+        <p><label>Description: <input type="text" name="description"></label></p>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if is_staff %}
+        <p><a href="/vacancy/new">Create Vacancy</a></p>
+    {% endif %}
+</body>
+</html>

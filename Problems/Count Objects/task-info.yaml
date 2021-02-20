@@ -1,0 +1,19 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    template = """
+    <html>
+      <div>
+        The assortment is {{ }} drinks
+      </div>
+    </html>
+    """
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7646#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 19 Feb 2021 07:19:09 UTC
+record: -1
