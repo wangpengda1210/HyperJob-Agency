@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: go_to = ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11114#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 20 Feb 2021 03:14:12 UTC
+record: -1
